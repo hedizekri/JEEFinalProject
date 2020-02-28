@@ -5,15 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>yncrea.2019</groupId>
-    <artifactId>lab04</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>coloc</artifactId>
     <packaging>pom</packaging>
-
+    <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>lab04-core</module>
-        <module>lab04-web</module>
+        <module>coloc-core</module>
+        <module>coloc-web</module>
     </modules>
-         
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -38,4 +37,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
