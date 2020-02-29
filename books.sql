@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `yncrea_lab06` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `yncrea_lab06`;
+CREATE DATABASE  IF NOT EXISTS `yncrea_coloc` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `yncrea_coloc`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
--- Host: localhost    Database: yncrea_lab06
+-- Host: localhost    Database: yncrea_coloc
 -- ------------------------------------------------------
 -- Server version	5.6.20
 

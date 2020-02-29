@@ -11,7 +11,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="coloc-coree" target="1.8" />
+      <module name="coloc" target="1.8" />
+      <module name="coloc-core" target="1.8" />
+      <module name="coloc-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

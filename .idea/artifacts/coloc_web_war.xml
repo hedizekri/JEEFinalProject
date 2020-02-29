@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="coloc-web:war">
+    <output-path>$PROJECT_DIR$/coloc-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>coloc-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="coloc-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="coloc-web:war exploded" />
+    </root>
+  </artifact>
+</component>
