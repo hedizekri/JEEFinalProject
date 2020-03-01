@@ -130,7 +130,7 @@
             </button>
         </nav>
     </header>
-
+    <a href="web/index2.html">tttttttttttttttttteeeeeeeeeessssssssssssttttttttttttttttttt</a>
     <div class="col text-center">
         <h2>Liste des colocataires :</h2>
     </div>
@@ -154,7 +154,7 @@
         var that = this;
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/coloc_web_war/api/colocataires/'
+            url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/'
         }).then(function successCallback(response) {
             that.colocataires = response.data;
         });
@@ -164,7 +164,7 @@
             this.selected = {};
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/coloc_web_war/api/books/' + bookId
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/books/' + bookId
             }).then(function successCallback(response) {
                 that.selected = response.data;
                 that.selected.author = that.selected.authors.join(", ");
@@ -179,7 +179,7 @@
             var review = {"score": score, "book": {"id": this.selected.id}, "dateOfReview": new Date()};
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war/api/reviews',
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/reviews',
                 data: review
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
@@ -189,21 +189,24 @@
         this.deleteColocataire = function (coloc_id) {
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:8080/coloc_web_war/api/colocataires/' + coloc_id,
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/' + coloc_id,
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
+            document.location.reload(true);
         }
 
         this.addColocataire = function (firstname_coloc, lastname_coloc) {
             var colocataire = {"firstname_coloc": firstname_coloc, "lastname_coloc": lastname_coloc}
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war/api/colocataires/',
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/',
                 data: colocataire
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
+            document.location.reload(true);
+
         }
     });
 </script>

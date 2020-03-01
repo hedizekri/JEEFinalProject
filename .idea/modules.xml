@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/JEEFinalProject.iml" filepath="$PROJECT_DIR$/.idea/JEEFinalProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coloc.iml" filepath="$PROJECT_DIR$/coloc.iml" />
       <module fileurl="file://$PROJECT_DIR$/coloc-core/coloc-core.iml" filepath="$PROJECT_DIR$/coloc-core/coloc-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/coloc-web/coloc-web.iml" filepath="$PROJECT_DIR$/coloc-web/coloc-web.iml" />
     </modules>
