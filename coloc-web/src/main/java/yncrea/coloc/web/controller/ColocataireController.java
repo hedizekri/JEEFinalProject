@@ -61,8 +61,8 @@ public class ColocataireController implements RestController {
 
     @DELETE
     @Path("/{colocId}")
-    public void deleteColocataire(@PathParam("colocId") long reviewId){
-        colocataireService.delete(reviewId);
+    public void deleteColocataire(@PathParam("colocId") long colocId){
+        colocataireService.delete(colocId);
     }
 
 

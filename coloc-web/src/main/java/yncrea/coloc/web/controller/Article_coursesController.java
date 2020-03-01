@@ -2,8 +2,6 @@ package yncrea.coloc.web.controller;
 
 
 import yncrea.coloc.core.entity.Article_courses;
-import yncrea.coloc.core.entity.Review;
-import yncrea.coloc.core.entity.Tag;
 import yncrea.coloc.core.service.Article_coursesService;
 import yncrea.coloc.web.dto.Article_coursesDTO;
 

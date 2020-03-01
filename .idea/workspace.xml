@@ -2,11 +2,42 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="coloc-web:war exploded" />
+      <artifact name="coloc-web:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70ea7590-ff7c-4c5b-a64a-8d8789e5f00d" name="Default Changelist" comment="" />
+    <list default="true" id="061def11-1b87-449d-9039-6ca2761b841c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6607c43a-994f-41ac-afd1-1709f4a873ca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6607c43a-994f-41ac-afd1-1709f4a873ca/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-core/coloc-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-core/coloc-core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/coloc-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/coloc-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/src/main/java/yncrea/coloc/web/controller/Article_coursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/src/main/java/yncrea/coloc/web/controller/Article_coursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/src/main/java/yncrea/coloc/web/controller/ColocataireController.java" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/src/main/java/yncrea/coloc/web/controller/ColocataireController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/src/main/webapp/web/listedecourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/src/main/webapp/web/listedecourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/src/main/webapp/web/pensebete.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/src/main/webapp/web/pensebete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/src/main/webapp/web/tachesmenageres.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/src/main/webapp/web/tachesmenageres.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/classes/yncrea/coloc/web/controller/Article_coursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/classes/yncrea/coloc/web/controller/Article_coursesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/classes/yncrea/coloc/web/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/classes/yncrea/coloc/web/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/classes/yncrea/coloc/web/controller/ColocataireController.class" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/classes/yncrea/coloc/web/controller/ColocataireController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/classes/yncrea/coloc/web/controller/Article_coursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/classes/yncrea/coloc/web/controller/Article_coursesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/classes/yncrea/coloc/web/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/classes/yncrea/coloc/web/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/classes/yncrea/coloc/web/controller/ColocataireController.class" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/classes/yncrea/coloc/web/controller/ColocataireController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/lib/coloc-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/WEB-INF/lib/coloc-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/web/listedecourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/web/listedecourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/web/pensebete.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/web/pensebete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/web/tachesmenageres.html" beforeDir="false" afterPath="$PROJECT_DIR$/coloc-web/target/coloc-web-1.0-SNAPSHOT/web/tachesmenageres.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,28 +77,11 @@
         <item name="yncrea_coloc: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="article_courses: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="yncrea_coloc@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="yncrea_coloc: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="colocataire: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="ExecutionTargetDialog">
-    <checked>
-      <node key="6607c43a-994f-41ac-afd1-1709f4a873ca" />
-    </checked>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -76,7 +90,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectId" id="1YWyClqIXv8IzQN0miw2Yew1MB1" />
+  <component name="ProjectId" id="1YXiwKoNozGB639uBHOxcRefanq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -85,22 +99,29 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.51" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/coloc_web_war_exploded" />
+    <configuration name="Tomcat 8.5.51" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.51" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/coloc_web_war" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="coloc-web:war exploded">
+        <artifact name="coloc-web:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/coloc_web_war_exploded" />
+            <option name="CONTEXT_PATH" value="/coloc_web_war" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_coloc_4" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_coloc_6" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -108,7 +129,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58338" />
+        <option name="DEBUG_PORT" value="58249" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -158,72 +179,8 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="coloc-web:war exploded" />
+          <artifact name="coloc-web:war" />
         </option>
-      </method>
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/coloc_web_war_exploded" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_coloc" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58338" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -246,6 +203,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:yncrea_coloc@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:yncrea_coloc@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2919b8dc" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -258,12 +220,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="70ea7590-ff7c-4c5b-a64a-8d8789e5f00d" name="Default Changelist" comment="" />
-      <created>1583072519275</created>
+      <changelist id="061def11-1b87-449d-9039-6ca2761b841c" name="Default Changelist" comment="" />
+      <created>1583095576849</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583072519275</updated>
-      <workItem from="1583072524592" duration="10331000" />
+      <updated>1583095576849</updated>
+      <workItem from="1583095581981" duration="4893000" />
     </task>
     <servers />
   </component>
@@ -271,69 +233,65 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="235" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583073522908">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583095750116">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="235" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583073522908" />
-    <state x="481" y="65" key="ExecutionTargetDialog" timestamp="1583073531762">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583095750116" />
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1583100492142">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="481" y="65" key="ExecutionTargetDialog/0.0.1366.728@0.0.1366.728" timestamp="1583073531762" />
-    <state width="904" height="204" key="GridCell.Tab.0.bottom" timestamp="1583082834819">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492142" />
+    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1583100492142">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583082834819" />
-    <state width="904" height="204" key="GridCell.Tab.0.center" timestamp="1583082834819">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492142" />
+    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1583100492142">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583082834819" />
-    <state width="904" height="204" key="GridCell.Tab.0.left" timestamp="1583082834819">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492142" />
+    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1583100492142">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583082834819" />
-    <state width="904" height="204" key="GridCell.Tab.0.right" timestamp="1583082834819">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492142" />
+    <state width="1293" height="282" key="GridCell.Tab.1.bottom" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583082834819" />
-    <state width="904" height="204" key="GridCell.Tab.1.bottom" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state width="1293" height="282" key="GridCell.Tab.1.center" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.1.center" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state width="1293" height="282" key="GridCell.Tab.1.left" timestamp="1583100492142">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.1.left" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492142" />
+    <state width="1293" height="282" key="GridCell.Tab.1.right" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.1.right" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.2.bottom" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state width="1293" height="282" key="GridCell.Tab.2.center" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.2.center" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state width="1293" height="282" key="GridCell.Tab.2.left" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.2.left" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state width="1293" height="282" key="GridCell.Tab.2.right" timestamp="1583100492143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state width="904" height="204" key="GridCell.Tab.2.right" timestamp="1583082834734">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1293" height="282" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583100492143" />
+    <state x="657" y="252" width="929" height="536" key="find.popup" timestamp="1583096231747">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="904" height="204" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1583082834734" />
-    <state x="380" y="96" width="606" height="536" key="find.popup" timestamp="1583080216606">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="657" y="252" width="929" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583096231747" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1583100244259">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="380" y="96" width="606" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1583080216606" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1583081273936">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583081273936" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583100244259" />
   </component>
 </project>

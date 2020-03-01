@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="yncrea_coloc@localhost" uuid="6607c43a-994f-41ac-afd1-1709f4a873ca">
+    <data-source source="LOCAL" name="yncrea_coloc@localhost" uuid="0a0067c3-868e-46ea-836c-7523ea8cc71e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
