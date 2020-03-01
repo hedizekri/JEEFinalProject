@@ -2,6 +2,7 @@ package yncrea.coloc.web.controller;
 
 
 import yncrea.coloc.core.entity.Colocataire;
+import yncrea.coloc.core.entity.Review;
 import yncrea.coloc.core.entity.Tag;
 import yncrea.coloc.core.service.ColocataireService;
 import yncrea.coloc.web.dto.ColocataireDTO;
@@ -27,10 +28,13 @@ public class ColocataireController implements RestController {
     @GET
     @Path("")
     public Map<Long,String> getColocataires(){
+        System.out.println("GetColocataires");
         List<Colocataire> colocataires = colocataireService.findAll();
         Map<Long,String> returnedMap = new HashMap<>();
         for(Colocataire colocataire:colocataires){
-            returnedMap.put(colocataire.getId_coloc(),colocataire.getLastname_coloc());
+            String name = colocataire.getFirstname_coloc() + " " + colocataire.getLastname_coloc();
+            System.out.println("name coloc : " + name);
+            returnedMap.put(colocataire.getId_coloc(), name);
         }
         return returnedMap;
     }
@@ -43,11 +47,23 @@ public class ColocataireController implements RestController {
         dto.setId_coloc(colocataire.getId_coloc());
         dto.setFirstname_coloc(colocataire.getFirstname_coloc());
         dto.setLastname_coloc(colocataire.getLastname_coloc());
-
-
         return dto;
     }
 
+    @POST
+    @Path("")
+    public void saveColocataire(Colocataire colocataire){
+        System.out.println("ColocataireController / saveColocataire");
+        System.out.println(colocataire.getFirstname_coloc() + " " + colocataire.getLastname_coloc());
+        colocataireService.save(colocataire);
+
+    }
+
+    @DELETE
+    @Path("/{colocId}")
+    public void deleteColocataire(@PathParam("colocId") long reviewId){
+        colocataireService.delete(reviewId);
+    }
 
 
 }
