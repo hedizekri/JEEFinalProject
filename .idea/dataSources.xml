@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="yncrea_coloc@localhost" uuid="66bf3e28-da31-41eb-80f8-fa096dbde3d6">
+    <data-source source="LOCAL" name="yncrea_coloc@localhost" uuid="6607c43a-994f-41ac-afd1-1709f4a873ca">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/yncrea_coloc</jdbc-url>
       <driver-properties>
         <property name="serverTimezone" value="UTC" />
-        <property name="cacheResultSetMetadata" value="FALSE" />
       </driver-properties>
     </data-source>
   </component>

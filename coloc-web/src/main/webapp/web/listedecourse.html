@@ -121,23 +121,23 @@
     </h1>
 </div> -->
 
-<div class="fluid-container" ng-controller="ColocatairesController as ctrl">
+<div class="fluid-container" ng-controller="Articles_coursesController as ctrl">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <h1>COLOC</h1>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/#">Accueil</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/#">Accueil</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/listedecourse.html">Liste de course</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/listedecourse.html">Liste de course</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/tachesmenageres.html">Tâches ménagères</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/tachesmenageres.html">Tâches ménagères</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/pensebete.html">Pense-bêtes</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/pensebete.html">Pense-bêtes</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -149,27 +149,27 @@
     </div>
     <br>
     <ul class="list-group">
-        <li ng-repeat="(coloc_id ,coloc_name) in ctrl.colocataires " class="list-group-item">
-            {{coloc_name}}
-            <a class="btn btn-danger float-right" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.deleteColocataire(coloc_id)">Supprimer</a>
+        <li ng-repeat="(id_article_courses ,produit) in ctrl.articles_courses " class="list-group-item">
+            {{produit}}
+            <a class="btn btn-danger float-right" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.deleteArticle_courses(id_article_courses)">Supprimer</a>
         </li>
     </ul>
     <br>
     <div class="col text-center">
-        Nouveau colocataire : <br> <input type="text" ng-model="coloc_firstname" placeholder="Prenom">   <input type="text" ng-model="coloc_lastname" placeholder="Nom"></textarea>
+        Nouveau produit : <br> <input type="text" ng-model="produit" placeholder="Nom du produit"></textarea>
         <br><br>
-        <a class="btn btn-primary float-center" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.addColocataire(coloc_firstname, coloc_lastname)">Ajouter</a>
+        <a class="btn btn-primary float-center" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.addArticle_courses(produit)">Ajouter</a>
     </div>
 </div>
 
 <script>
-    angular.module("coloc", []).controller("ColocatairesController", function ($http) {
+    angular.module("coloc", []).controller("Articles_coursesController", function ($http) {
         var that = this;
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/coloc_web_war/api/colocataires/'
+            url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/'
         }).then(function successCallback(response) {
-            that.colocataires = response.data;
+            that.articles_courses = response.data;
         });
 
 
@@ -177,7 +177,7 @@
             this.selected = {};
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/coloc_web_war/api/books/' + bookId
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/' + bookId
             }).then(function successCallback(response) {
                 that.selected = response.data;
                 that.selected.author = that.selected.authors.join(", ");
@@ -192,33 +192,33 @@
             var review = {"score": score, "book": {"id": this.selected.id}, "dateOfReview": new Date()};
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war/api/reviews',
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/reviews',
                 data: review
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
         }
 
-        this.deleteColocataire = function (coloc_id) {
+        this.deleteArticle_courses = function (article_id) {
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:8080/coloc_web_war/api/colocataires/' + coloc_id,
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/' + article_id,
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
-            document.location.reload(true);
+            document.location.reload();
         }
 
-        this.addColocataire = function (firstname_coloc, lastname_coloc) {
-            var colocataire = {"firstname_coloc": firstname_coloc, "lastname_coloc": lastname_coloc}
+        this.addArticle_courses = function (produit) {
+            var article_courses = {"produit": produit}
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war/api/colocataires/',
-                data: colocataire
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/',
+                data: article_courses
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
-            document.location.reload(true);
+            document.location.reload();
         }
     });
 </script>

@@ -115,29 +115,29 @@
 </head>
 
 <body>
-<!-- <div class="splashscreen d-flex align-items-center justify-content-center ng-cloak">
+<div class="splashscreen d-flex align-items-center justify-content-center ng-cloak">
     <h1>Coloc<br/>
         <small class="text-secondary">Accès en cours...</small>
     </h1>
-</div> -->
+</div>
 
 <div class="fluid-container" ng-controller="ColocatairesController as ctrl">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <h1>COLOC</h1>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/#">Accueil</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/#">Accueil</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/listedecourse.html">Liste de course</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/listedecourse.html">Liste de course</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/tachesmenageres.html">Tâches ménagères</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/tachesmenageres.html">Tâches ménagères</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/pensebete.html">Pense-bêtes</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/pensebete.html">Pense-bêtes</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -163,11 +163,12 @@
 </div>
 
 <script>
+
     angular.module("coloc", []).controller("ColocatairesController", function ($http) {
         var that = this;
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/coloc_web_war/api/colocataires/'
+            url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/'
         }).then(function successCallback(response) {
             that.colocataires = response.data;
         });
@@ -177,7 +178,7 @@
             this.selected = {};
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/coloc_web_war/api/books/' + bookId
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/books/' + bookId
             }).then(function successCallback(response) {
                 that.selected = response.data;
                 that.selected.author = that.selected.authors.join(", ");
@@ -192,7 +193,7 @@
             var review = {"score": score, "book": {"id": this.selected.id}, "dateOfReview": new Date()};
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war/api/reviews',
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/reviews',
                 data: review
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
@@ -202,24 +203,28 @@
         this.deleteColocataire = function (coloc_id) {
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:8080/coloc_web_war/api/colocataires/' + coloc_id,
+                url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/' + coloc_id,
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
-            document.location.reload(true);
+            document.location.reload();
         }
 
+
         this.addColocataire = function (firstname_coloc, lastname_coloc) {
+
             var colocataire = {"firstname_coloc": firstname_coloc, "lastname_coloc": lastname_coloc}
-            $http({
-                method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war/api/colocataires/',
-                data: colocataire
-            }).then(function successCallback(response) {
-                refreshSelected(that.selected.id);
-            });
-            document.location.reload(true);
-        }
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/',
+                    data: colocataire
+                }).then(function successCallback(response) {
+                    refreshSelected(that.selected.id);
+                });
+                document.location.reload();
+                document.location.reload();
+            }
+
     });
 </script>
 </body>
