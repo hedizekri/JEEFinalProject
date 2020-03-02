@@ -3,7 +3,6 @@ package yncrea.coloc.core.service;
 import org.springframework.stereotype.Service;
 import yncrea.coloc.core.dao.ColocataireDAO;
 import yncrea.coloc.core.entity.Colocataire;
-import yncrea.coloc.core.entity.Review;
 
 import javax.transaction.Transactional;
 import java.util.List;

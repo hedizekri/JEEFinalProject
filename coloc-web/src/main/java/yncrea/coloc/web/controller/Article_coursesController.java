@@ -59,10 +59,14 @@ public class Article_coursesController implements RestController {
 
     @DELETE
     @Path("/{articleId}")
-    public void deleteArticle_courses(@PathParam("articleId") long reviewId){
-        article_coursesService.delete(reviewId);
+    public void deleteArticle_courses(@PathParam("articleId") long articleId){
+        article_coursesService.delete(articleId);
     }
 
-
+    @DELETE
+    @Path("")
+    public void deleteAllArticle_courses(){
+        article_coursesService.deleteAll();
+    }
 
 }

@@ -60,8 +60,8 @@ public class Pense_beteController implements RestController {
 
     @DELETE
     @Path("/{penseId}")
-    public void deletePense_bete(@PathParam("penseId") long reviewId){
-        pense_beteService.delete(reviewId);
+    public void deletePense_bete(@PathParam("penseId") long penseId){
+        pense_beteService.delete(penseId);
     }
 
 

@@ -3,7 +3,6 @@ package yncrea.coloc.core.service;
 import org.springframework.stereotype.Service;
 import yncrea.coloc.core.dao.Article_coursesDAO;
 import yncrea.coloc.core.entity.Article_courses;
-import yncrea.coloc.core.entity.Review;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -35,5 +34,9 @@ public class Article_coursesService {
 
     public void delete(final long article_courses_id) {
         article_coursesDAO.deleteById(article_courses_id);
+    }
+
+    public void deleteAll() {
+        article_coursesDAO.deleteAll();
     }
 }

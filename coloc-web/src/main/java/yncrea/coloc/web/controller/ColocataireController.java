@@ -2,8 +2,6 @@ package yncrea.coloc.web.controller;
 
 
 import yncrea.coloc.core.entity.Colocataire;
-import yncrea.coloc.core.entity.Review;
-import yncrea.coloc.core.entity.Tag;
 import yncrea.coloc.core.service.ColocataireService;
 import yncrea.coloc.web.dto.ColocataireDTO;
 
@@ -14,7 +12,6 @@ import javax.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @Named
 @Path("/colocataires")

@@ -62,8 +62,8 @@ public class Tache_menagereController implements RestController {
 
     @DELETE
     @Path("/{tacheId}")
-    public void deleteTache_menagere(@PathParam("tacheId") long reviewId){
-        tache_menagereService.delete(reviewId);
+    public void deleteTache_menagere(@PathParam("tacheId") long tacheId){
+        tache_menagereService.delete(tacheId);
     }
 
 

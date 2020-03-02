@@ -111,6 +111,10 @@
         .rating > input:checked ~ label:hover ~ label {
             color: #FFED85;
         }
+
+        .coloc_logo {
+            width: 110px;
+        }
     </style>
 </head>
 
@@ -124,20 +128,20 @@
 <div class="fluid-container" ng-controller="Articles_coursesController as ctrl">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <h1>COLOC</h1>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/#">Accueil</a>
+            <a href="#" class="pull-left"><img class="coloc_logo" src="../coloc_logo_blanc.png"></a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/#">Accueil</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/listedecourse.html">Liste de course</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/listedecourse.html">Liste de course</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/tachesmenageres.html">Tâches ménagères</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/tachesmenageres.html">Tâches ménagères</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war_exploded/web/pensebete.html">Pense-bêtes</a>
+            <a class="navbar-brand" href="http://localhost:8080/coloc_web_war/web/pensebete.html">Pense-bêtes</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -153,6 +157,7 @@
             {{produit}}
             <a class="btn btn-danger float-right" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.deleteArticle_courses(id_article_courses)">Supprimer</a>
         </li>
+        <a class="btn btn-danger float-right" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.deleteAllArticle_courses()">Vider la liste</a>
     </ul>
     <br>
     <div class="col text-center">
@@ -179,42 +184,35 @@
         var that = this;
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/'
+            url: 'http://localhost:8080/coloc_web_war/api/articles_courses/'
         }).then(function successCallback(response) {
             that.articles_courses = response.data;
         });
 
-
-        var refreshSelected = function (bookId) {
+        var refreshSelected = function (article_id) {
             this.selected = {};
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/' + bookId
+                url: 'http://localhost:8080/coloc_web_war/api/articles_courses/' + article_id
             }).then(function successCallback(response) {
                 that.selected = response.data;
-                that.selected.author = that.selected.authors.join(", ");
-            });
-
-        };
-        this.loadModal = function (bookId) {
-            refreshSelected(bookId);
-        }
-
-        this.addReview = function (score) {
-            var review = {"score": score, "book": {"id": this.selected.id}, "dateOfReview": new Date()};
-            $http({
-                method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/reviews',
-                data: review
-            }).then(function successCallback(response) {
-                refreshSelected(that.selected.id);
             });
         }
 
         this.deleteArticle_courses = function (article_id) {
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/' + article_id,
+                url: 'http://localhost:8080/coloc_web_war/api/articles_courses/' + article_id,
+            }).then(function successCallback(response) {
+                refreshSelected(that.selected.id);
+            });
+            document.location.reload();
+        }
+
+        this.deleteAllArticle_courses = function () {
+            $http({
+                method: 'DELETE',
+                url: 'http://localhost:8080/coloc_web_war/api/articles_courses/',
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
@@ -226,7 +224,7 @@
             var article_courses = {"produit": produit_string}
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/articles_courses/',
+                url: 'http://localhost:8080/coloc_web_war/api/articles_courses/',
                 data: article_courses
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
@@ -239,42 +237,25 @@
         var that = this;
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/'
+            url: 'http://localhost:8080/coloc_web_war/api/colocataires/'
         }).then(function successCallback(response) {
             that.colocataires = response.data;
         });
 
-
-        var refreshSelected = function (bookId) {
+        var refreshSelected = function (coloc_id) {
             this.selected = {};
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/books/' + bookId
+                url: 'http://localhost:8080/coloc_web_war/api/colocataires/' + coloc_id
             }).then(function successCallback(response) {
                 that.selected = response.data;
-                that.selected.author = that.selected.authors.join(", ");
-            });
-
-        };
-        this.loadModal = function (bookId) {
-            refreshSelected(bookId);
-        }
-
-        this.addReview = function (score) {
-            var review = {"score": score, "book": {"id": this.selected.id}, "dateOfReview": new Date()};
-            $http({
-                method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/reviews',
-                data: review
-            }).then(function successCallback(response) {
-                refreshSelected(that.selected.id);
             });
         }
 
         this.deleteColocataire = function (coloc_id) {
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/' + coloc_id,
+                url: 'http://localhost:8080/coloc_web_war/api/colocataires/' + coloc_id,
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);
             });
@@ -287,7 +268,7 @@
             var colocataire = {"firstname_coloc": firstname_coloc, "lastname_coloc": lastname_coloc}
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/coloc_web_war_exploded/api/colocataires/',
+                url: 'http://localhost:8080/coloc_web_war/api/colocataires/',
                 data: colocataire
             }).then(function successCallback(response) {
                 refreshSelected(that.selected.id);

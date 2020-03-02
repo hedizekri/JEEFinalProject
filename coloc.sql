@@ -18,14 +18,6 @@ USE `yncrea_coloc`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-DROP TABLE IF EXISTS `author`;
-DROP TABLE IF EXISTS `book`;
-DROP TABLE IF EXISTS `book_author`;
-DROP TABLE IF EXISTS `book_tag`;
-DROP TABLE IF EXISTS `tag`;
-DROP TABLE IF EXISTS `review`;
-
-
 --
 -- Table structure for table `colocataire`
 --
@@ -49,7 +41,15 @@ CREATE TABLE `colocataire` (
 
 LOCK TABLES `colocataire` WRITE;
 /*!40000 ALTER TABLE `colocataire` DISABLE KEYS */;
-INSERT INTO `colocataire` VALUES (10,'Hedi','Zekri'),(11,'Rodolphe','Fourdinier');
+INSERT INTO `colocataire` VALUES (1, 'Hedi', 'Zekri'),
+                                 (2, 'Rodolphe', 'Fourdinier'),
+                                 (3, 'Alan', 'Turing'),
+                                 (4, 'Albert', 'Einstein'),
+                                 (5, 'Mark', 'Zuckerberg'),
+                                 (6, 'Bill', 'Gates'),
+                                 (7, 'Steve', 'Jobs'),
+                                 (8, 'Jeff', 'Bezos'),
+                                 (9, 'Amaury', 'Willemant');
 /*!40000 ALTER TABLE `colocataire` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +87,10 @@ CREATE TABLE `pense_bete` (
 
 LOCK TABLES `pense_bete` WRITE;
 /*!40000 ALTER TABLE `pense_bete` DISABLE KEYS */;
-INSERT INTO `pense_bete` VALUES (1,10,'demander a maman pour le pq', '29022020'),(2, 11,'soccuper du chat du voisin', '29022020'),(3, 11, 'changer machine a kawa', '01032020');
+INSERT INTO `pense_bete` VALUES (1, 2,'Anniv Hedi lundi prochain (ajouté par : Rodolphe Fourdinier)', '29022020'),
+                                (2, 4,'Rappeler EDF (ajouté par : Albert Einstein)', '29022020'),
+                                (3, 4, 'Recupérer colis au point relais (ajouté par : Albert Einstein)', '29022020'),
+                                (4, 8, 'Dimanche : Fête des grand-mère (ajouté par : Jeff Bezos)', '02032020');
 /*!40000 ALTER TABLE `pense_bete` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,7 +112,7 @@ DROP TABLE IF EXISTS `article_courses`;
 CREATE TABLE `article_courses` (
                              `id_article_courses` bigint(20) NOT NULL,
                              `id_coloc` bigint(20) DEFAULT NULL,
-                             `produit` varchar(30) DEFAULT NULL,
+                             `produit` varchar(255) DEFAULT NULL,
                              PRIMARY KEY (`id_article_courses`),
                              KEY `FKp9yng9x0cua3n2j4gfvlwpsc0` (`id_coloc`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -121,7 +124,13 @@ CREATE TABLE `article_courses` (
 
 LOCK TABLES `article_courses` WRITE;
 /*!40000 ALTER TABLE `article_courses` DISABLE KEYS */;
-INSERT INTO `article_courses` VALUES (1,10,'sardines'),(2, 10,'shampouin'),(3, 10, 'kawa');
+INSERT INTO `article_courses` VALUES (1, 2, 'Boite de thon (ajouté par : Rodolphe Fourdinier)'),
+                                     (2, 1, 'Gel douche (ajouté par : Hedi Zekri)'),
+                                     (3, 6, 'Carte SD 64 Go (ajouté par : Bill Gates)'),
+                                     (4, 7, 'Beurre doux (ajouté par : Steve Jobs)'),
+                                     (5, 7, 'Peigne fin (ajouté par : Steve Jobs)'),
+                                     (6, 3, 'Biscottes avoine (ajouté par : Alan Turing)'),
+                                     (7, 5, 'Café soluble (ajouté par : Mark Zuckerberg)');
 /*!40000 ALTER TABLE `article_courses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +154,7 @@ CREATE TABLE `tache_menagere` (
                                  `id_tache_menagere` bigint(20) NOT NULL,
                                  `id_coloc_auteur` bigint(20) DEFAULT NULL,
                                  `id_coloc_destinataire` bigint(20) DEFAULT NULL,
-                                 `contenu_tache_menagere` varchar(30) DEFAULT NULL,
+                                 `contenu_tache_menagere` varchar(255) DEFAULT NULL,
                                  `date_tache_menagere` datetime DEFAULT NULL,
                                  PRIMARY KEY (`id_tache_menagere`),
                                  KEY `FKp9yng9x0cua3n2j4gfvlwpsc0` (`id_coloc_auteur`),
@@ -159,7 +168,13 @@ CREATE TABLE `tache_menagere` (
 
 LOCK TABLES `tache_menagere` WRITE;
 /*!40000 ALTER TABLE `tache_menagere` DISABLE KEYS */;
-INSERT INTO `tache_menagere` VALUES (1,10, 11, 'vaisselle stp', '29022020'),(2, 11, 10, 'range ma chambre', '29022020'),(3, 11, 10, 'repare la machine a kawa stp', '01032020');
+INSERT INTO `tache_menagere` VALUES (1, 9, 2, 'Faire la vaisselle (concerne : Rodolphe Fourdinier)', '29022020'),
+                                    (2, 4, 6, 'Trier le courrier (concerne : Bill Gates)', '29022020'),
+                                    (3, 6, 7, 'Passer la serpillère (concerne : Steve Jobs)', '01032020'),
+                                    (4, 5, 5, 'Faire les courses (concerne : Mark Zuckerberg)' , '02032020'),
+                                    (5, 1, 5, 'Laver les carreaux (concerne : Mark Zuckerberg)', '02032020'),
+                                    (6, 4, 1, 'Faire la vaisselle (concerne : Hedi Zekri)', '02032020'),
+                                    (7, 2, 9, 'Mettre 16/20 a ce projet JEE (concerne : Amaury Willemant)', '02032020');
 /*!40000 ALTER TABLE `tache_menagere` ENABLE KEYS */;
 UNLOCK TABLES;
 
